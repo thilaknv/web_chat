@@ -1,5 +1,5 @@
 // const socket = io('ws://localhost:3500');
-const socket = io('https://web-chat-app-socket-io.vercel.app');
+const socket = io('https://chezz-server-web-socket-io.onrender.com');
 
 // try {
 //     socket = io('https://web-chat-app-socket-io.vercel.app');
