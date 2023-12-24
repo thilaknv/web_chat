@@ -1,5 +1,17 @@
 // const socket = io('ws://localhost:3500');
-const socket = io('https://web-chat-app-socket-io.vercel.app/');
+const socket = io('https://web-chat-app-socket-io.vercel.app');
+
+// try {
+//     socket = io('https://web-chat-app-socket-io.vercel.app');
+// } catch (error) {
+//     try {
+//         socket = io('ws://localhost:3500');
+//     } catch (er) {
+//         socket.close(() => {
+//             console.log("the end");
+//         })
+//     }
+// }
 
 const msgInput = document.querySelector("#msgInput");
 const username = document.querySelector("#username");

@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WS</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"
-        integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,21 +15,25 @@
             <input type="text" id="chatRoom" placeholder="chat room" size=5 required>
             <button id="join">Join</button>
         </form>
-
+        
         <p>:<span class="activity"></span></p>
-
+        
         <p class="user-list"></p>
 
         <p class="room-list"></p>
 
         <ul class="chat-display"></ul>
-
+        
         <form class="msg-form">
             <input type="text" id="msgInput" placeholder="your msg">
             <button>Send</button>
         </form>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"
+    integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/socket.io/socket.io.js"></script>
 <script src="app.js"></script>
 
 </html>
