@@ -1,8 +1,8 @@
 import express from "express";
 import { Server } from "socket.io";
 
-// const port = process.env.PORT || 3500
-const port = 3500;
+const port = process.env.PORT || 3500
+// const port = 3500;
 const ADMIN = "Admin";
 
 const app = express();
@@ -26,7 +26,12 @@ const UserState = {
     }
 }
 
-const io = new Server(expressServer, { port });
+const io = new Server(expressServer, {
+    cors: {
+        origin: process.env.NODE_ENV === "production" ? false :
+            ["http://localhost:5500", "http://127.0.0.1:5500"]
+    }
+});
 
 io.on('connection', socket => {
     // upon connection - only to user
