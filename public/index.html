@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"
+        integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="chatBox">
+        <form class="join-form">
+            <input type="text" id="username" maxlength="8" placeholder="usename" size="5" required>
+            <input type="text" id="chatRoom" placeholder="chat room" size=5 required>
+            <button id="join">Join</button>
+        </form>
+
+        <p>:<span class="activity"></span></p>
+
+        <ul class="chat-display"></ul>
+
+        <p class="user-list"></p>
+
+        <p class="room-list"></p>
+
+        <form class="msg-form">
+            <input type="text" id="msgInput" placeholder="your msg">
+            <button>Send</button>
+        </form>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
